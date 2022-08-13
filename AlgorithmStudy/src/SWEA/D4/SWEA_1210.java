@@ -1,11 +1,11 @@
-package algo_ws_02_2;
+package SWEA.D4;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-public class Solution {
+public class SWEA_1210 {
 	static int[] dx = {0, 0, -1}; //좌우상
 	static int[] dy = {-1, 1, 0}; //좌우상
 	

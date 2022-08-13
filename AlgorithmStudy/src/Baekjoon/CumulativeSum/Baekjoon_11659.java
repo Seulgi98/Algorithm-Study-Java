@@ -3,7 +3,7 @@ package algo_ws_03_3;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class Main {
+public class Baekjoon_11659 {
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringBuilder sb = new StringBuilder();

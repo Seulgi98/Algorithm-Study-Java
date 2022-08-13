@@ -1,10 +1,10 @@
-package algo_ws_03_1;
+package SWEA.D3;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 
-public class Solution {
+public class SWEA_1873 {
 	static int[] dx = {0, 1, 0, -1}; //R:[0] D:[1] L:[2] U:[3]
 	static int[] dy = {1, 0, -1, 0}; //우하좌상
 	static int dir = 0;

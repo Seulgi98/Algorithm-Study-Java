@@ -1,11 +1,11 @@
-package com.ssafy.ws.problem;
+package SWEA.D3;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-public class Solution {
+public class SWEA_1208 {
 
 	public static void main(String[] args) throws Exception {
 

@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6d254934-06ae-48dc-bafb-75149c7d6d95" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/untitled/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/AlgorithmStudy.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/out/production/untitled/BJ_220720/BJ_2178.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/src/Baekjoon/Baekjoon_1436.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/src/Baekjoon/Baekjoon_2178.java" beforeDir="false" />
-    </list>
+    <list default="true" id="6d254934-06ae-48dc-bafb-75149c7d6d95" name="변경" comment="변경" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,10 +20,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Project.color": "625f0b",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/seulgi/SSAFY/codingTest"
+    "last_opened_file_path": "/Users/seulgi/Dev/codingTest"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
@@ -45,6 +36,7 @@
       <option name="presentableId" value="Default" />
       <updated>1658364232796</updated>
       <workItem from="1658364234439" duration="4000" />
+      <workItem from="1660142075271" duration="34000" />
     </task>
     <servers />
   </component>

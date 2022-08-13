@@ -1,9 +1,9 @@
-package hwalgo03_부울경_04반_박슬기;
+package SWEA.D2;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class Solution {
+public class SWEA_2001 {
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
