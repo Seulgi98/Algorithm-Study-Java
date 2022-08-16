@@ -21,6 +21,7 @@ public class Baekjoon_1697 {
 
         if (n >= k) {
             System.out.println(n - k); //수빈위치 - 동생위치
+            // 수빈이 시작위치가 동생보다 크면 무조건 -1해서 만나야하니까 n-k출력
         } else {
             System.out.println(bfs()); //bfs출력
         }
