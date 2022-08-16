@@ -20,20 +20,22 @@ public class Baekjoon_1697 {
         k = Integer.parseInt(st.nextToken());
 
         if (n >= k) {
-            System.out.println(n - k);
+            System.out.println(n - k); //수빈위치 - 동생위치
         } else {
-            System.out.println(bfs());
+            System.out.println(bfs()); //bfs출력
         }
 
     }
 
     static int bfs() {
         q.add(n);
-        arr[n] = 1;
+        arr[n] = 1; //현재위치 값 1로 변경
 
+        // 큐가 비지 않을 동안 while문 돌고, 다음 next위치를 변경
         while (!q.isEmpty()) {
             int x = q.poll();
             for (int i = 0; i < 3; i++) {
+
                 int next;
                 if (i == 0)
                     next = x - 1;
@@ -42,11 +44,12 @@ public class Baekjoon_1697 {
                 else
                     next = x * 2;
 
-                if (next == k)
+                if (next == k) //동생 찾았을때
                     return arr[x];
 
+                //next가 범위 내에 있고 방문한 이력이 없으면 큐에 넣어줌
                 if (next >= 0 && next < 100001 && arr[next] == 0) {
-                    arr[next] = arr[x] + 1;
+                    arr[next] = arr[x] + 1; // 걸음수 설정
                     q.add(next);
                 }
             }
