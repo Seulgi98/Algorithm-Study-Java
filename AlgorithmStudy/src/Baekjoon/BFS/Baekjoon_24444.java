@@ -1,63 +1,54 @@
 package Baekjoon.BFS;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class Baekjoon_24444 {
-    static StringTokenizer st;
-    static int N, M, R;
-    static List<Integer> []list;
+    int[] answer;
+    ArrayList<Integer>[] edges;
+    int idx = 0;
+    int[] v;
 
-    public static void main(String[] args) throws IOException {
+    private void solution() throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        st=new StringTokenizer(br.readLine());
-        N=Integer.parseInt(st.nextToken());
-        M=Integer.parseInt(st.nextToken());
-        R=Integer.parseInt(st.nextToken());
-        list=new ArrayList[N+1];
-        for(int i=1;i<=N;i++) list[i]=new ArrayList<>();
-
-        for(int i=0;i<M;i++) {
-            st=new StringTokenizer(br.readLine());
-            int u=Integer.parseInt(st.nextToken());
-            int v=Integer.parseInt(st.nextToken());
-            list[u].add(v);
-            list[v].add(u);
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        int n = Integer.parseInt(st.nextToken());
+        int m = Integer.parseInt(st.nextToken());
+        int r = Integer.parseInt(st.nextToken());
+        edges = new ArrayList[n+1];
+        for (int i = 1; i <= n; i++) edges[i] = new ArrayList<>();
+        answer = new int[n+1];
+        v = new int[n+1];
+        while (m-->0) {
+            st = new StringTokenizer(br.readLine());
+            int u = Integer.parseInt(st.nextToken());
+            int v = Integer.parseInt(st.nextToken());
+            edges[u].add(v);
+            edges[v].add(u);
         }
-        for(int i=1;i<=N;i++) Collections.sort(list[i], Collections.reverseOrder());
-        bfs(R);
-    }
+        for (int i = 1; i <= n; i++) Collections.sort(edges[i]);
 
-    private static void bfs(int x) {
-        Queue<Integer> queue=new LinkedList<>();
-        queue.add(x);
-
-        boolean []visited=new boolean[N+1];
-        visited[x]=true;
-
-        int cnt=0;
-        int []order=new int[N+1];
-        while(!queue.isEmpty()) {
-            int q=queue.poll();
-            cnt++;
-            order[q]=cnt;
-
-            for(int i:list[q]) {
-                if(!visited[i]) {
-                    visited[i]=true;
-                    queue.add(i);
-                }
+        Queue<Integer> q = new ArrayDeque<>();
+        q.add(r);
+        int visitCnt = 1;
+        v[r] = visitCnt;
+        while (!q.isEmpty()) {
+            int cur = q.poll();
+            for (int next : edges[cur]) {
+                if (v[next]!=0) continue;
+                v[next] = ++visitCnt;
+                q.add(next);
             }
         }
-
-        for(int i=1;i<=N;i++) System.out.println(order[i]);
+        StringBuilder sb = new StringBuilder();
+        for (int i = 1; i <= n; i++) {
+            sb.append(v[i]).append('\n');
+        }
+        System.out.print(sb);
     }
 
+    public static void main(String[] args) throws Exception {
+        new Baekjoon_24444().solution();
+    }
 }
